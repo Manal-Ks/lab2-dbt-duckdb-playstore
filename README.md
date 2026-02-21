@@ -15,6 +15,7 @@ The goal is to extract Google Play Store data, transform it into a structured wa
 ---
 
 ## 🏗 Architecture
+```text
 Play Store API
 ↓
 Python Ingestion (JSONL files)
@@ -26,10 +27,11 @@ dbt Staging Layer
 dbt Marts (Star Schema)
 ↓
 Analytics / BI
-
+```
 ---
 
 ## 📁 Project Structure
+```text
 lab2-dbt-duckdb-playstore/
 │
 ├── ingestion/
@@ -50,7 +52,7 @@ lab2-dbt-duckdb-playstore/
 │
 └── .gitignore
 
-
+```
 ---
 
 ## 🚀 How to Run the Pipeline
