@@ -60,12 +60,13 @@ lab2-dbt-duckdb-playstore/
 ```bash
 python ingestion/src/run_ingestion.py
 This generates:
+```
 
 - data/raw/apps.jsonl
 
 - data/raw/reviews.jsonl
 
----
+
 
 
 ### 2️⃣ Run dbt (from dbt directory)
