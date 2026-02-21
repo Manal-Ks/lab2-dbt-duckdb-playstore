@@ -205,3 +205,19 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ===============================
+# Project-specific ignores
+# ===============================
+
+# dbt artifacts
+dbt_playstore_project/dbt_playstore/target/
+dbt_playstore_project/dbt_playstore/logs/
+
+# Data folders (do not version data)
+data/raw/
+data/duckdb/
+*.duckdb
+
+# Old archived project
+old_manual/

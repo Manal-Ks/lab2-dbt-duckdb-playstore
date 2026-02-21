@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: stg_raw_apps
+    columns:
+      - name: app_id
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_raw_reviews
+    columns:
+      - name: review_id
+        tests:
+          - not_null
+          - unique
+      - name: app_id
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_raw_apps')
+                field: app_id
+      - name: score
+        tests:
+          - not_null
+  - name: stg_playstore_apps
+    columns:
+      - name: app_id
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_playstore_reviews
+    columns:
+      - name: review_id
+        tests:
+          - not_null
+          - unique
+      - name: app_id
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_playstore_apps')
+                field: app_id
+      - name: score
+        tests:
+          - not_null          
