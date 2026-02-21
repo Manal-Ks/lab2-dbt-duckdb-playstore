@@ -64,7 +64,8 @@ This generates:
 - data/raw/apps.jsonl
 
 - data/raw/reviews.jsonl
-2️⃣ Run dbt (from dbt directory)
+
+### 2️⃣ Run dbt (from dbt directory)
 cd dbt_playstore_project/dbt_playstore
 dbt run
 dbt test
