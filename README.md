@@ -126,6 +126,15 @@ This simulates a production-ready incremental pipeline.
 
 - All tests pass successfully.
 
+## 📊 Example Analytical Queries
+
+Example queries enabled by the warehouse:
+
+- Average rating by app
+- Number of reviews per day
+- Top apps by engagement
+- Distribution of scores
+
 ## 🛠 Technologies Used
 
 - Python 3.11
