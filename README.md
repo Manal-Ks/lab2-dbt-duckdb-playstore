@@ -59,45 +59,45 @@ lab2-dbt-duckdb-playstore/
 
 ```bash
 python ingestion/src/run_ingestion.py
-This generates:
 ```
+
+This generates:
 
 - data/raw/apps.jsonl
 
 - data/raw/reviews.jsonl
 
-
-
-
 ### 2️⃣ Run dbt (from dbt directory)
+```bash
 cd dbt_playstore_project/dbt_playstore
 dbt run
 dbt test
-🧱 Data Warehouse Design
-Star Schema
+```
+## 🧱 Data Warehouse Design
+### Star Schema
 📌 Dimensions
 
-dim_apps
+- dim_apps
 
-dim_date
+- dim_date
 
 📌 Fact Table
 
-fact_reviews
+- fact_reviews
 
 Fact table contains:
 
-review_id
+- review_id
 
-app_key
+- app_key
 
-date_key
+- date_key
 
-score
+- score
 
-thumbs_up_count
+- thumbs_up_count
 
-review metadata
+- review metadata
 
 🔄 Incremental Strategy
 
@@ -112,7 +112,7 @@ where review_at_utc > (select max(review_at_utc) from {{ this }})
 
 This simulates a production-ready incremental pipeline.
 
-✅ Data Quality
+## ✅ Data Quality
 
 - dbt tests implemented:
 
@@ -124,7 +124,7 @@ This simulates a production-ready incremental pipeline.
 
 - All tests pass successfully.
 
-🛠 Technologies Used
+## 🛠 Technologies Used
 
 - Python 3.11
 
@@ -134,7 +134,7 @@ This simulates a production-ready incremental pipeline.
 
 - Git
 
-📌 Key Learnings
+## 📌 Key Learnings
 
 - Building a full ELT pipeline
 
@@ -145,3 +145,7 @@ This simulates a production-ready incremental pipeline.
 - Implementing incremental models
 
 - Managing data versioning with Git
+
+## Author :
+
+Manal KERMOSS
